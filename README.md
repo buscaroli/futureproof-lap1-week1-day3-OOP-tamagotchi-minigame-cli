@@ -20,9 +20,9 @@ Look after a pet in this mini game for the CLI 🖥
 - User wants to check in with their pet and see how it’s happiness and hunger levels are.
   Note: These will require you to create methods within your Pet class.
   It is your choice as to whether you encapsulate your app logic in another class
-  Implement Error handling
-  How can you make this a more engaging game? What else would be cool for your pet to do? Can the user choose the type of food they feed their pet, with the pet randomly deciding if they like it or not?
-  To gather user input, the inquirer or prompt-sync modules are two of many alternatives to the builtin readline module. It is up to you what tool you use.
+  - Implement Error handling
+  - How can you make this a more engaging game? What else would be cool for your pet to do? Can the user choose the type of food they feed their pet, with the pet randomly deciding if they like it or not?
+  - To gather user input, the inquirer or prompt-sync modules are two of many alternatives to the builtin readline module. It is up to you what tool you use.
 
 ## Technologies
 

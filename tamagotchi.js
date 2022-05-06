@@ -1,5 +1,13 @@
 var prompt = require('prompt-sync')()
+// Error Handling
+class InvalidUsernameError extends Error {
+  constructor() {
+    super('If you really want to play, please enter a valid name!')
+    this.name = 'InvalidUsernameError'
+  }
+}
 
+// Class
 class Pet {
   constructor(name, happiness = 5, hunger = 5) {
     this.name = name
@@ -153,12 +161,26 @@ class Pet {
   }
 }
 
-// Start - ask for the pet's name until a non empty string is entered
-let petName
-do {
-  console.clear()
-  petName = prompt("What is your pet's name?  ")
-} while (petName === '')
+// FIRST VERSION: Ask fo the username until something is entered
+// // Start - ask for the pet's name until a non empty string is entered
+// let petName
+// do {
+//   console.clear()
+//   petName = prompt("What is your pet's name?  ")
+// } while (petName === '')
 
+// SECOND VERSION: I preferred the approach of the FIRST VERSION
+// but it was required by the spec to use Error Handling in this
+// exercise
+let petName
+
+console.clear()
+petName = prompt("What is your pet's name?  ")
+console.log('PET NAME: ', petName)
+if (!petName) throw new InvalidUsernameError()
+
+// Creating an instance of the class Pet
 let newGame = new Pet(petName)
+
+// Starting the Game by calling its loop method
 newGame.loop()
